@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Project</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    
+    <script src="https://use.fontawesome.com/77ee567d80.js"></script>
+    
+  </head>
+  <body>
+     <div class="bg"></div>
+    <div class="banner">
+         <div class="navbar">
+             <img src="/Images/logo.png" class="logo">
+             <ul>
+                 <li><a href="/index.html">home</a></li>
+                 <li><a href="#">projects</a></li>
+                 <li><a href="about.html">about</a></li>
+             </ul>
+         </div>
+         <div class="content">
+             <style>
+                 .content input[type=search]{
+                      padding: 6px;
+                      border: none;
+                      margin-top: 8px;
+                      text-align: center;
+                      border-radius: 50px;
+                      font-size: 17px;
+                 }
+                 .content button[type=submit]{
+                     position: absolute;
+                     transform: translate(-35px,0px);
+                     padding: 8px 10px;
+                      margin-top: 8px;
+                      margin-right: 16px;
+                      background: #66e6fa;
+                      font-size: 17px;
+                      border: none;
+                      border-radius: 50px;
+                      cursor: pointer;
+                 }
+                 .content ul li{
+                     list-style-type: none;
+                 }
+                 
+             </style>
+             
+             <h1>PROJECTS</h1>
+             
+             <input type="search" placeholder="Search.." id="searcher" onsearch="search();">
+             <button type="submit"  class="fa fa-search" onclick="search();" ></button>
+             <ul id="projects displayer"></ul>
+             
+             <script src="project.js"></script>
+         </div>
+    </div>
+    
+        <p id="console"></p><script>var consoleContent="",lc=0;console.log=function(){lc++;for(let n in arguments)consoleContent=consoleContent+"<br>["+lc+"] "+arguments[n];document.getElementById("console").innerHTML=consoleContent}</script>
+    </body>
+  
+  
+</html>

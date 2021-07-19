@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>about me</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    
+    <script src="https://use.fontawesome.com/77ee567d80.js"></script>
+  </head>
+  <body>
+      <div class="bg"></div>
+    <div class="banner">
+         <div class="navbar">
+             <img src="/Images/logo.png" class="logo">
+             <ul>
+                 <li><a href="/index.html">home</a></li>
+                 <li><a href="projects.html">projects</a></li>
+                 <li><a href="#">about</a></li>
+             </ul>
+         </div>
+         <div class="content">
+             <h1>ABOUT ME!</h1>
+             <p id="description">hi</p>
+             <script>
+                var txt = 'Hi, my name is Silver Takana. But you can call me Silver for short. I am currently {my age} years old (updated in real-time.) I am a programmer, coder and developer. I love artificial intelligence, computer graphics and games. I have a discord server where you can chat with me about games, projects or even art! I share my games and other stuff in there so you can check it out and be our early tester. So, come over to my discord server and say hi to me now and then! Thanks. You could also find my coding projects in my "project" section above. Have a good day!'
+              
+                var date = new Date()
+                var year = date.getFullYear()
+                var month = date.getMonth()
+                var day = date.getDate()
+                var my_age = year - 2007
+                if(month<12){
+                    my_age--
+                }else if(month === 12){
+                    if(day<16){
+                        my_age--
+                    }
+                }
+                txt = txt.replace("{my age}", my_age);
+                var displayer = document.getElementById("description")
+                displayer.innerHTML = txt
+             </script>
+         </div>
+    </div>
+  </body>
+</html>
